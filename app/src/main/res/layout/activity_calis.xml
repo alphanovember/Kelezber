@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pau.kelezber.Calis"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/Calis"
+        android:layout_width="175dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="388dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="66dp"
+        android:text="Çalış"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Test"
+        android:layout_width="175dp"
+        android:layout_height="149dp"
+        android:layout_marginBottom="388dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="66dp"
+        android:text="Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Calis"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/ListV"
+        android:layout_width="395dp"
+        android:layout_height="373dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Calis" />
+</android.support.constraint.ConstraintLayout>
