@@ -59,7 +59,7 @@ public class Edit extends AppCompatActivity {
             }
         });
 
-       /* btVeriEkle.setOnClickListener(new View.OnClickListener() {
+        btVeriEkle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -85,14 +85,14 @@ public class Edit extends AppCompatActivity {
                 }
             }
         });
-       */ /*Intent intent=getIntent();
+        Intent intent=getIntent();
         gelenid = intent.getIntExtra("id",0);
         Database db = new Database(getApplicationContext());
         HashMap<String, String> map = db.kelimeleriGoster(gelenid);
 
         etSoru.setText(map.get("soru"));
         etCevap.setText(map.get("cevap"));
-*/
+
         btDuzenle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

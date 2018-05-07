@@ -4,28 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pau.kelezber.Login">
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context="pau.kelezber.Login"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/Duzenle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="131dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
-        android:text="Düzenle"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_width="131dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Kelime Düzenle"
+        app:layout_constraintBottom_toTopOf="@+id/Cikis"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/Calis"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Calis"
+        android:layout_width="131dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Kelime Çalış"
+        app:layout_constraintBottom_toTopOf="@+id/Rapor"
+        app:layout_constraintEnd_toStartOf="@+id/Duzenle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Rapor"
+        android:layout_width="131dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="155dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="Rapor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Cikis"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Calis" />
+
+    <Button
+        android:id="@+id/Cikis"
+        android:layout_width="131dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="155dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="Çıkış"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Rapor"
+        app:layout_constraintTop_toBottomOf="@+id/Duzenle" />
 
 </android.support.constraint.ConstraintLayout>

@@ -55,7 +55,7 @@ public class Database extends SQLiteOpenHelper {
     public HashMap<String, String> kelimeleriGoster(int id){
 
         HashMap<String,String> kelimeler = new HashMap<String,String>();
-        String selectQuery = "SELECT  FROM " + TABLE_NAME+ " WHERE id="+id;
+        String selectQuery = "SELECT * FROM " + TABLE_NAME+ " WHERE id="+id;
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = db.rawQuery(selectQuery, null);

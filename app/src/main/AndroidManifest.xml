@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Edit" />
-        <activity android:name=".Secim"></activity>
+        <activity android:name=".Secim" />
+        <activity android:name=".Rapor" />
+        <activity android:name=".Calis"></activity>
     </application>
 
 </manifest>

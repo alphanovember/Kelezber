@@ -53,7 +53,7 @@ public class Secim extends AppCompatActivity {
                 sorular[i]= kelimeliste.get(i).get("soru");
                 cevaplar[i]=kelimeliste.get(i).get("cevap");
                 kelimeidler[i] = Integer.parseInt(kelimeliste.get(i).get("id"));
-                liste[i]= idler[i]+"   "+sorular[i]+"\n"+cevaplar[i];
+                liste[i]=sorular[i]+"\t\t\t"+cevaplar[i];
             }
 
             lvKelime = (ListView) findViewById(R.id.lvKelime);
