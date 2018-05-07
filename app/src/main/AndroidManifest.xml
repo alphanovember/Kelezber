@@ -19,7 +19,9 @@
         <activity android:name=".Edit" />
         <activity android:name=".Secim" />
         <activity android:name=".Rapor" />
-        <activity android:name=".Calis"></activity>
+        <activity android:name=".Calis" />
+        <activity android:name=".sorutest" />
+        <activity android:name=".donenyer2"></activity>
     </application>
 
 </manifest>
