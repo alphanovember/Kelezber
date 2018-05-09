@@ -4,6 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pau.kelezber.sorutest">
+    android:background="@drawable/b1"
+    tools:context="pau.kelezber.sorutest"
+    tools:layout_editor_absoluteY="81dp">
 
+    <Button
+        android:id="@+id/btCevapla"
+        android:layout_width="137dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/darker_gray"
+        android:text="CEVAPLA"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btSira"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSira"
+        android:layout_width="137dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/darker_gray"
+        android:text="SIRADAKİ SORU"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btCevapla" />
+
+    <TextView
+        android:id="@+id/tvSoru"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="2dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/txGizli"
+        app:layout_constraintEnd_toEndOf="@+id/btBitir"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txGizli"
+        app:layout_constraintTop_toBottomOf="@+id/btBitir" />
+
+    <EditText
+        android:id="@+id/etCvp"
+        android:layout_width="256dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btCevapla"
+        app:layout_constraintEnd_toStartOf="@+id/bBilmiyom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txGizli"
+        tools:text="cevap" />
+
+    <TextView
+        android:id="@+id/txGizli"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="247dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/etCvp"
+        app:layout_constraintEnd_toStartOf="@+id/btSira"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txAdet"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="42dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btBitir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btBitir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="42dp"
+        android:text="Bitir"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tvSoru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txAdet"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bBilmiyom"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="87dp"
+        android:background="@drawable/soru"
+        app:layout_constraintBottom_toTopOf="@+id/btSira"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etCvp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSoru" />
 </android.support.constraint.ConstraintLayout>

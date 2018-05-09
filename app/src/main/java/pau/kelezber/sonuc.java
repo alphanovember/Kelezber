@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -35,6 +36,13 @@ public class sonuc extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_sonuc);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        android.support.v7.app.ActionBar ab=getSupportActionBar();
+        ab.hide();
+
         setContentView(R.layout.activity_sonuc);
         Intent i = getIntent();
         lvAd = (ListView) findViewById(R.id.lvAd);
@@ -74,6 +82,7 @@ public class sonuc extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(sonuc.this,Login.class);
                 startActivity(i);
+                finish();
             }
         });
             btTemiz.setOnClickListener(new View.OnClickListener() {
@@ -201,7 +210,7 @@ public class sonuc extends AppCompatActivity {
                 gecici4 = sure[i];
                 sure2[i] = gecici4;
 
-                listeyaz[i] = i + 1 +"-"+ "\t"  + puan2[i] + "               "+sure2[i];
+                listeyaz[i] = i + 1 +"-"+ "\t"  + puan2[i] + "                                           "+sure2[i]+"Y";
             }
             adapter = new ArrayAdapter<String>(this, R.layout.lyo, R.id.lyolar, listeyaz);
         }
@@ -214,7 +223,7 @@ public class sonuc extends AppCompatActivity {
                 gecici4 = sure[i];
                 sure2[i] = gecici4;
 
-                listeyaz2[i] = i + 1 +"-"+ "\t"  + puan2[i] + "               " +sure2[i];
+                listeyaz2[i] = i + 1 +"-"+ "\t"  + puan2[i] +"D"+ "                                    " +sure2[i]+"Y";
             }
             adapter = new ArrayAdapter<String>(this, R.layout.lyo, R.id.lyolar, listeyaz2);
         }

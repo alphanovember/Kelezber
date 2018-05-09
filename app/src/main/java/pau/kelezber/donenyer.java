@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.GridLayout;
@@ -17,6 +18,13 @@ ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_donenyer);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        android.support.v7.app.ActionBar ab=getSupportActionBar();
+        ab.hide();
+
         setContentView(R.layout.activity_donenyer);
 
         imageView.setOnClickListener(new View.OnClickListener() {

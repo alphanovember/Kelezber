@@ -13,12 +13,13 @@ public class Database extends SQLiteOpenHelper {
 
 
 
-    private static final int DATABASE_VERSION = 12;
-    private static final String DATABASE_NAME = "db_kelime";
-    private static final String TABLE_NAME = "sorular";
+    private static final int DATABASE_VERSION = 13;
+    private static final String DATABASE_NAME = "db_kelime2";
+    private static final String TABLE_NAME = "sorular12";
     private static String SORU = "soru";
     private static String SORU_ID = "id";
     private static String CEVAP = "cevap";
+    private static String YILDIZ = "yildiz";
 
     public Database (Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -29,7 +30,8 @@ public class Database extends SQLiteOpenHelper {
         String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME +"("
                 + SORU_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + SORU + " TEXT,"
-                + CEVAP + " TEXT" + ")";
+                + CEVAP + " TEXT,"
+                + YILDIZ + " TEXT" + ")";
         db.execSQL(CREATE_TABLE);
 
     }
@@ -42,12 +44,13 @@ public class Database extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void kelimeEkle(String soru, String cevap) {
+    public void kelimeEkle(String soru, String cevap, String yildiz) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues v = new ContentValues();
         v.put(SORU, soru);
         v.put(CEVAP, cevap);
+        v.put(YILDIZ,yildiz);
         db.insert(TABLE_NAME, null, v);
         db.close();
     }
@@ -65,6 +68,7 @@ public class Database extends SQLiteOpenHelper {
 
             kelimeler.put(SORU, c.getString(1));
             kelimeler.put(CEVAP, c.getString(2));
+            kelimeler.put(YILDIZ, c.getString(3));
                     }
         c.close();
         db.close();
@@ -96,12 +100,13 @@ public class Database extends SQLiteOpenHelper {
     }
 
 
-    public void kelimeDuzenle(String soru, String cevap,int id) {
+    public void kelimeDuzenle(String soru, String cevap, String yildiz,int id) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues v = new ContentValues();
         v.put(SORU, soru);
         v.put(CEVAP, cevap);
+        v.put(YILDIZ, yildiz);
         db.update(TABLE_NAME, v, SORU_ID + " = ?",new String[] { String.valueOf(id) });
 
     }

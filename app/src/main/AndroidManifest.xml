@@ -21,7 +21,8 @@
         <activity android:name=".Rapor" />
         <activity android:name=".Calis" />
         <activity android:name=".sorutest" />
-        <activity android:name=".donenyer2"></activity>
+        <activity android:name=".donenyer2" />
+        <activity android:name=".sonuc"></activity>
     </application>
 
 </manifest>

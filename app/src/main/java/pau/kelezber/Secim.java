@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,12 +18,19 @@ public class Secim extends AppCompatActivity {
     ListView lvKelime;
     ArrayAdapter<String> adapter;
     ArrayList<HashMap<String, String>> kelimeliste;
-    String idler[],sorular[],cevaplar[],liste[];
+    String idler[],sorular[],cevaplar[],liste[],yildizlar[];
     Button btGd;
     int kelimeidler[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_secim);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        android.support.v7.app.ActionBar ab=getSupportActionBar();
+        ab.hide();
+
         setContentView(R.layout.activity_secim);
         onResume();
     }
@@ -46,14 +54,16 @@ public class Secim extends AppCompatActivity {
             idler=new String[kelimeliste.size()];
             sorular=new String[kelimeliste.size()];
             cevaplar = new String[kelimeliste.size()];
+            yildizlar= new String[kelimeliste.size()];
             liste=new String[kelimeliste.size()];
             kelimeidler = new int[kelimeliste.size()];
             for (int i = 0; i < kelimeliste.size(); i++) {
                 idler[i] = kelimeliste.get(i).get("id");
                 sorular[i]= kelimeliste.get(i).get("soru");
                 cevaplar[i]=kelimeliste.get(i).get("cevap");
+                yildizlar[i]=kelimeliste.get(i).get("yildiz");
                 kelimeidler[i] = Integer.parseInt(kelimeliste.get(i).get("id"));
-                liste[i]=sorular[i]+"\t\t\t"+cevaplar[i];
+                liste[i]=sorular[i]+"\t\t\t\t\t\t"+cevaplar[i]+"\t\t\t\t\t\t\t\t\t-->"+yildizlar[i];
             }
 
             lvKelime = (ListView) findViewById(R.id.lvKelime);
